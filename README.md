@@ -37,7 +37,7 @@ To write and execute Assembly Language Programs to perform arithmetic operations
 CODE SEGMENT
 ASSUME CS: CODE, DS: CODE
 ORG 1000H
-MOV SI,2000H
+MOV SI,1200H
 MOV CL,00H
 MOV AX,[SI]
 MOV BX,[SI+02H]
@@ -56,16 +56,21 @@ END
 #### Output Table
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
-| ----------------------- | ------------------------ |
-|                         |                          |
+|1200 12                  |1204 24                   |
+|1201 34                  |1205 68                   |
+|1202 12                  |1206 00                   |
+|1203 34                  |1207 C4                   |
 
 #### Manual Calculations
+![add ](https://github.com/user-attachments/assets/6429a5b4-5e66-4202-b7b0-23d74ae5b9b3)
 
-(Add your calculation here)
+
 
 ---
 
 ## OUTPUT IMAGE FROM MASM SOFTWARE
+![add asm](https://github.com/user-attachments/assets/f2b1d6ba-4530-40a4-94cb-90b8ea966f2e)
+![add output](https://github.com/user-attachments/assets/4ae3833f-73a6-4dc1-b059-daf89f8934da)
 
 ## 2. SUBTRACTION
 
@@ -84,22 +89,46 @@ END
 
 #### Program
 
+```asm
+CODE SEGMENT
+ASSUME CS: CODE, DS: CODE
+ORG 1000H
+MOV SI,1200H
+MOV CL,00H
+MOV AX,[SI]
+MOV BX,[SI+02H]
+SUB AX,BX
+JNC L1
+INC CL
+L1:
+MOV [SI+04H],AX
+MOV [SI+06H],CL
+MOV AH,4CH
+INT 21H
+CODE ENDS
+END
+```
 
 
 #### Output Table
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
-| ----------------------- | ------------------------ |
-|                         |                          |
+| 1200 12                 | 12024 00                 |
+| 1201 34                 | 1205  00                 |
+| 1202 12                 | 1206  00                 |
+| 1203 34                 | 1207  C4                 |
 
 #### Manual Calculations
 
-(Add your calculation here)
+![sub](https://github.com/user-attachments/assets/cd2b98e3-e40e-44ed-935f-850f872b6f13)
+
 
 ---
 
 
 ## OUTPUT SCREEN FROM MASM SOFTWARE
+![sub asm](https://github.com/user-attachments/assets/320fd842-0585-40e9-b7ed-6b715638ff20)
+![sub output](https://github.com/user-attachments/assets/e8e0588d-3616-42de-8c1d-35ace4f63046)
 
 ## 3. MULTIPLICATION
 
@@ -122,7 +151,7 @@ END
 CODE SEGMENT
 ASSUME CS: CODE, DS: CODE
 ORG 1000H
-MOV SI,2000H
+MOV SI,1200H
 MOV DX,0000H
 MOV AX,[SI]
 MOV BX,[SI+02H]
@@ -138,16 +167,20 @@ END
 #### Output Table
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
-| ----------------------- | ------------------------ |
-|                         |                          |
-
+| 1200 12                 | 1204 44                  |
+| 1201 34                 | 1205 51                  |          
+| 1202 12                 | 1206 97                  |
+| 1203 34                 | 1207 0A                  |
 #### Manual Calculations
+![mul](https://github.com/user-attachments/assets/13ff685c-4991-4bf0-977f-5da40674dd56)
 
-(Add your calculation here)
+
 
 ---
 
 ## OUTPUT SCREEN FROM MASM SOFTWARE
+![mul asm](https://github.com/user-attachments/assets/aafb3b79-0189-421e-adf6-28858f6c1df0)
+![mul output](https://github.com/user-attachments/assets/83998e7d-e078-4c2c-aa0f-b1ac0c97a10d)
 
 ## 4. DIVISION
 
@@ -167,7 +200,7 @@ END
 CODE SEGMENT
 ASSUME CS: CODE, DS: CODE
 ORG 1000H
-MOV SI,2000H
+MOV SI,1200H
 MOV DX,0000H
 MOV AX,[SI]
 MOV BX,[SI+02H]
@@ -183,16 +216,20 @@ END
 #### Output Table
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
-| ----------------------- | ------------------------ |
-|                         |                          |
+| 1200 12                 | 1204 01                  |
+| 1201 34                 | 1205 00                  |
+| 1202 12                 | 1206 00                  |
+| 1203 34                 | 1207 00                  |
+#### Manu|al Calculations
+![div](https://github.com/user-attachments/assets/323842ef-35d0-4b8d-b7b0-9e3fcb32ab63)
 
-#### Manual Calculations
 
-(Add your calculation here)
 
 ---
 ## OUTPUT FROM MASM SOFTWARE
 
+![div asm](https://github.com/user-attachments/assets/a1cc1545-0162-4477-8433-87658710c35b)
+![div output](https://github.com/user-attachments/assets/3c0afef7-5364-4955-a22e-48753e8fb735)
 
 
 ## RESULT
