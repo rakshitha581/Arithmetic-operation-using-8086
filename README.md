@@ -55,11 +55,13 @@ END
 
 #### Output Table
 
+
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
-|1200 12                  |1204 24                   |
-|1201 34                  |1205 68                   |
-|1202 12                  |1206 00                   |
-|1203 34                  |1207 C4                   |
+| ----------------------- | -----------------------  |
+| 1200 12                 | 1204 24                  |
+| 1201 34                 | 1205 68                  |
+| 1202 12                 | 1206 00                  |
+| 1203 34                 | 1207 C4                  |
 
 #### Manual Calculations
 ![add ](https://github.com/user-attachments/assets/6429a5b4-5e66-4202-b7b0-23d74ae5b9b3)
@@ -113,6 +115,7 @@ END
 #### Output Table
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
+| ----------------------- | ------------------------ |
 | 1200 12                 | 12024 00                 |
 | 1201 34                 | 1205  00                 |
 | 1202 12                 | 1206  00                 |
@@ -167,6 +170,7 @@ END
 #### Output Table
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
+| ----------------------- | ------------------------ |
 | 1200 12                 | 1204 44                  |
 | 1201 34                 | 1205 51                  |          
 | 1202 12                 | 1206 97                  |
@@ -216,6 +220,7 @@ END
 #### Output Table
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
+| ----------------------- | ------------------------ |
 | 1200 12                 | 1204 01                  |
 | 1201 34                 | 1205 00                  |
 | 1202 12                 | 1206 00                  |
